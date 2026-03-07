@@ -6,13 +6,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Login</title>
+<title>Login | VMK Networks</title>
 
 <link rel="stylesheet" href="css/login.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
+
+<!-- Background video -->
 
 <video autoplay muted loop class="video-bg">
 <source src="video/background.mp4">
@@ -21,7 +26,7 @@
 <div class="overlay"></div>
 
 
-<div class="login-card">
+<div class="card" id="loginCard">
 
 <h2>Sign In</h2>
 
@@ -29,39 +34,63 @@
 
 <input id="email" type="email" placeholder="Email">
 
+<div class="password-box">
+
 <input id="password" type="password" placeholder="Password">
 
-<button type="submit">Login</button>
+<i class="fa fa-eye" onclick="togglePassword()"></i>
+
+</div>
+
+<button type="submit" class="btn">Login</button>
 
 </form>
 
-<p>
-No account?
-<a onclick="showRegister()">Register</a>
+<div class="line"></div>
+
+<button class="admin-btn">Admin Login</button>
+
+<p class="link">
+No account? <span onclick="showRegister()">Register</span>
 </p>
 
 </div>
 
 
-<div class="register-card" id="registerCard">
+
+<div class="card register" id="registerCard">
 
 <h2>Create Account</h2>
 
 <form id="registerForm">
 
+<div class="row">
 <input id="first" placeholder="First name">
 <input id="last" placeholder="Last name">
+</div>
+
 <input id="regEmail" placeholder="Email">
+
 <input id="phone" placeholder="Phone">
-<input id="address" placeholder="Address (optional)">
+
+<input id="address" placeholder="Address (Optional)">
+
 <input id="pincode" placeholder="Pincode">
+
 <input id="regPass" type="password" placeholder="Password">
 
-<button type="submit">Register</button>
+<input id="confirmPass" type="password" placeholder="Confirm Password">
+
+<button type="submit" class="btn">Register</button>
 
 </form>
 
+<p class="link">
+Already account? <span onclick="showLogin()">Login</span>
+</p>
+
 </div>
+
 
 <script src="js/login.js"></script>
 
